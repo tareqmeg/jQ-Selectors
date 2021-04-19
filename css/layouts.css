@@ -1,0 +1,30 @@
+
+header{
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    align-content: center;
+    background-color: blue;
+}
+
+
+
+main{
+    width: 90%;
+    background-color: crimson;
+
+
+}
+
+div {
+    float: left;
+
+}
+
+footer{
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    align-content: center;
+    background-color: blue;
+}
