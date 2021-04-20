@@ -6,6 +6,64 @@
 
 
 
-body {
-    background: #fff;
+
+
+  header{
+      padding-bottom: 30px;
+      width: 100%;
+      height: 75px;
+      line-height: 75px;
+      background-color: crimson;
+      text-align: center;
+      order: 1;
   }
+
+  main{
+      margin-top: 50px;
+       width: 90%;
+       display: flex;
+       flex-wrap: wrap;
+       
+       align-content: center;
+       align-items: center;
+       order: 2;
+
+
+  }
+
+  .hide {
+      display: none;
+  }
+
+  .photo-template{
+      display: none;
+  }
+
+  div {
+      width: 200px;
+      height: 150px;
+      margin: 30px;
+      float: left;
+      text-align: center;
+  }
+
+
+  div img {
+      height: 70%;
+      width: 70%;
+      
+  }
+
+#photo-template:first-child{
+    display: none;
+}
+
+  footer{
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    align-content: center;
+    background-color: blue;
+    order: 3;
+    text-align: center;
+}
