@@ -29,10 +29,11 @@ Horns.prototype.hoenRender = function (){
   let hornsMergedTemplate = Mustache.render(template,this);
   $('#horn-photo').append(hornsMergedTemplate);
 
-  let hornoption = Mustache.render(template,this);
+  let template2 = $('#list-template').html();
+  let hornoption = Mustache.render(template2,this);
   if( !myArr.includes(this.keyword)){
     myArr.push(this.keyword);
-    $('select').append(hornoption);
+    $('#list').append(hornoption);
   }
 
 
@@ -84,10 +85,13 @@ $('select').on('change',function(event){
 $(() => Horns.readjson1());
 $('#page1').on('click', function (e){
   e.preventDefault();
+  $('#horn-photo').children().remove();
   $(() => Horns.readjson1());
 });
+
 $('#page2').on('click', function (e){
   e.preventDefault();
+  $('#horn-photo').children().remove();
   $(() => Horns.readjson2());
 });
 
