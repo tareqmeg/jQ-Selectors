@@ -105,13 +105,6 @@ $('select').on('change',() =>{
 
 $('#page1').on('click', function (e){
   e.preventDefault();
-  $('#page2').on('click', function (e){
-    e.preventDefault();
-    $('#horn-photo').children().remove();
-    $('option').next().remove();
-    $(() => Horns.readjson2());
-    $('#page2').off('click');
-  });
   $('#horn-photo').children().remove();
   $('option').next().remove();
   myArr=[];
@@ -123,7 +116,7 @@ $('#page2').on('click', function (e){
   $('#horn-photo').children().remove();
   $('option').next().remove();
   $(() => Horns.readjson2());
-  $('#page2').off('click');
+  // $('#page2').off('click');
 });
 
 
