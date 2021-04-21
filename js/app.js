@@ -39,6 +39,10 @@ Horns.prototype.hoenRender = function (){
 
 };
 
+
+/*-------reading files (page-1.json and page-2.json)----------- */
+
+
 Horns.readjson1 = () =>{
   const ajaxSettings = {
     method: 'get',
@@ -75,25 +79,56 @@ Horns.readjson2 = () =>{
     });
 
 };
-$('select').on('change',function(event){
-  event.preventDefault();
-  let select=$(this).children('option:selected').val();
-  $('main').children().addClass('hide');
-  $(`.${select}`).removeClass('hide');
-});
+
 
 $(() => Horns.readjson1());
+$('option').next().remove();
+myArr=[];
+
+/*-------Filter----------- */
+
+
+$('select').on('change',() =>{
+  let selectedOption = $('select').children('option:selected').val();
+  console.log(selectedOption);
+  if( selectedOption === 'default'){
+    $('div').show();
+  }else{
+    $('div').hide();
+    $(`.${selectedOption}`).show();
+  }
+
+});
+
+
+/*-------pagination----------- */
+
 $('#page1').on('click', function (e){
   e.preventDefault();
+  $('#page2').on('click', function (e){
+    e.preventDefault();
+    $('#horn-photo').children().remove();
+    $('option').next().remove();
+    $(() => Horns.readjson2());
+    $('#page2').off('click');
+  });
   $('#horn-photo').children().remove();
+  $('option').next().remove();
+  myArr=[];
   $(() => Horns.readjson1());
 });
 
 $('#page2').on('click', function (e){
   e.preventDefault();
   $('#horn-photo').children().remove();
+  $('option').next().remove();
   $(() => Horns.readjson2());
+  $('#page2').off('click');
 });
+
+
+
+
 
 
 

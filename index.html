@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script id='list-template' type="text/x-tmpl-mustache">
-      <option value="{{default}}">{{keyword}}</option>
+      <option value='{{keyword}}'>{{keyword}}</option>
       
     </script>
     <script id='photo-template' type="text/x-tmpl-mustache">
       
-      <div>
+      <div class='{{keyword}}'>
+        <h2>{{title}}</h2>
         <img src="{{image_url}}">
-        <p>{{title}}</p>
         <p>{{description}}</p>
         
       </div>
@@ -22,7 +22,7 @@
     <header>
       <h1>The Gallery of Horns</h1>
       <select id="list">
-        <option value="default">Filter by Keyword</option>
+        <option  value="default">Filter by Keyword</option>
       </select>
       <button id="page1">page1</button>
       <button id="page2">page2</button>

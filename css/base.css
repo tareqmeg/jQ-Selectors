@@ -31,9 +31,7 @@
 
   }
 
-  .hide {
-      display: none;
-  }
+ 
 
   .photo-template{
       display: none;
@@ -41,8 +39,9 @@
 
   div {
       width: 200px;
-      height: 150px;
+      height: 200px;
       margin: 30px;
+      padding: 20px;
       float: left;
       text-align: center;
   }
