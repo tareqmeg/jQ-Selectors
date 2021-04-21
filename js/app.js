@@ -102,6 +102,14 @@ $('select').on('change',() =>{
 
 
 /*-------pagination----------- */
+$('#page2').on('click', function (e){
+  e.preventDefault();
+  $('#horn-photo').children().remove();
+  $('option').next().remove();
+  $(() => Horns.readjson2());
+  // $('#page2').off('click');
+});
+
 
 $('#page1').on('click', function (e){
   e.preventDefault();
@@ -111,13 +119,7 @@ $('#page1').on('click', function (e){
   $(() => Horns.readjson1());
 });
 
-$('#page2').on('click', function (e){
-  e.preventDefault();
-  $('#horn-photo').children().remove();
-  $('option').next().remove();
-  $(() => Horns.readjson2());
-  // $('#page2').off('click');
-});
+
 
 
 
